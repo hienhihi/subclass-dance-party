@@ -5,6 +5,8 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
   this.setPosition(top, left);
   this.step();
+  console.log(this);
+  this.lineUp();
 };
 
 makeDancer.prototype.step = function() {
@@ -24,5 +26,17 @@ makeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-// now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-// this one sets the position to some random default point within the body
+makeDancer.prototype.lineUp = function() {
+  // if (direction === 'left') {
+  //   this.$node.css({left: '100px'});
+  // } else if (direction === 'right') {
+  //   this.$node.css({right: '100px'});
+  // }
+  var styleSettings = {
+    left: '50px'
+  };
+  this.$node.css(styleSettings);
+};
+// now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we
+
+//need to stop calling the function step when the line up is invol

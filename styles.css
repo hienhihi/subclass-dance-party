@@ -21,7 +21,41 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
   position:absolute;
+}
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+.background img {
+  flex-shrink: 0;
+  min-width: 100%;
+  height: 890px;
+  background-size: cover;
+}
+
+.flipDancer {
+  content: url('./guy.png');
+  animation-iteration-count: infinite;
+  animation-name: flipDancer;
+  animation-duration: 4s;
+  width: 150px;
+  height: 150px;
+}
+
+.Drake {
+  content: url('./drake.gif');
+  animation-iteration-count: infinite;
+  /* animation-name: flipDancer; */
+  animation-duration: 4s;
+  width: 150px;
+  height: 150px;
+}
+
+@keyframes flipDancer {
+  0% {left: Math.floor(Math.random() * Math.floor(max).toString().concat('px'))};
+  25% {top: '10px'};
+  50% {}
 }
